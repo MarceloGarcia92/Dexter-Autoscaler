@@ -1,0 +1,11 @@
+#Test files
+*.ipynb
+
+#Folders
+minikube-pv
+
+docker/spark-3.5.0-bin-hadoop3
+docker/charts
+
+/*.sh
+/*.yaml

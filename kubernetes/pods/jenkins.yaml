@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  labels:
+    app: CiCd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: CiCd
+  template:
+    metadata:
+      labels:
+        app: CiCd
+    spec:
+      #serviceAccountName: jenkins
+      containers:
+      - name: jenkins
+        image: jenkins/jenkins:lts
+        ports:
+        - containerPort: 8080
